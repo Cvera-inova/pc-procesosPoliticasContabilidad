@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: frontend-repository-procesos-politicas-contabilidad
+    container_name: procesos-politicas-contabilidad-docker-nextjs-1
+    ports:
+      - "3006:3000"
+    env_file:
+      - .env
+    networks:
+      my_new_network:
+        ipv4_address: 10.2.100.1 # Asigna una dirección IP dentro de esta nueva subred
+
+networks:
+  my_new_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.2.0.0/16  # Ajusta la subred aquí
