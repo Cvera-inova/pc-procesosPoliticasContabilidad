@@ -13,11 +13,11 @@ services:
       - .env
     networks:
       my_new_network:
-        ipv4_address: 10.2.10.10 # Asigna una dirección IP dentro de esta nueva subred
+        ipv4_address: 10.3.10.10  # Cambias la IP aquí
 
 networks:
   my_new_network:
     driver: bridge
     ipam:
       config:
-        - subnet: 10.3.0.0/16  # Ajusta la subred aquí
+        - subnet: 10.3.0.0/16  # Mantienes esta subred
