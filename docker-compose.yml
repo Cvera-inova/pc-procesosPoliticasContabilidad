@@ -20,4 +20,4 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 10.2.0.0/16  # Ajusta la subred aquí
+        - subnet: 10.2.0.10/16  # Ajusta la subred aquí
